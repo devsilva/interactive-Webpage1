@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+   font-family: 'Epilogue', sans-serif;
+    font-size:18px;
+}
+
+nav{
+    padding: 0 15px;
+}
+a{
+    text-decoration:none;
+}
+.menu, .sub-menu{
+  list-style-type: none;
+padding:7px 0px;
+
+}
+
+.logo{
+    padding: 15px 0px;
+}
+.item > .btn{
+    padding:9px 5px;
+}
+
+.item:not(.right) a:hover,
+.item a:hover::after ,.item.right>a:hover{
+    color: #ccc;
+}
+
+/* mobile menu */
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50%;
+    justify-content: space-between;
+}
+
+.menu .items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 3px;
+}
+
+
+.menu li.sub-item {
+    padding: 4px;
+    margin-left:14%; 
+}
+
+.sub-item img{
+margin-right:4%;
+}
+
+.sub-item a{
+    padding:7px 7px;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.toggle {
+    order: 0;
+    font-size: 20px;
+}
+.item.btn {
+    order: 3;
+}
+
+
+.item {
+    order: 4;
+    width: 70%;
+    display: block;
+    margin-left:auto;
+ display: none;
+
+}
+.item.right{
+text-align: center;
+}
+
+.item.right .btn{
+    border:1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    width:100%;
+    padding:13px 14px;
+    font-size:18px;
+}
+.active .item{
+    display: block;
+}
+.submenu {
+    display: none;
+}
+.submenu-active .submenu {
+   display: block;
+}
+.has-submenu i {
+    font-size: 12px;
+}
+
+/* .active{
+ display:block;
+} */
+
+.has-submenu > a::after {
+    font-size:12px;
+    font-family: "Font Awesome 5 Free";
+    line-height:16px;
+    font-weight: 900;
+    content:"\f078";
+    padding-left:10px;
+}
+.desktop-hero{
+    display: none;
+}
+/* -------------------------Tablet menu ----------------------------*/
+
+@media only screen and (min-width: 700px){
+    
+    
+   
+    .menu {
+        display:flex;
+        flex-wrap: nowrap;
+   background: none;
+   padding: 1.5% 1%;
+   gap:0;
+   justify-content: center;
+   }
+
+   .menu .items{
+       display: flex;
+       flex-wrap: nowrap;
+       justify-content: center;
+    padding:0px 7%;
+    gap:6%;
+   }
+.main-right{
+    justify-content: space-between;
+    gap:10%;
+}
+
+.logo{
+
+    width:10%;
+}
+
+.item {
+    display:block;
+    width:auto;
+    order:1;
+}
+.toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+}
+.menu a.btn {
+    padding: 10px 15px;
+    margin: 5px 0;
+}
+li.toggle{
+    display:none;
+}
+
+.menu li:nth-child(7) {
+
+    margin-left:4%;
+}
+
+.main-right{
+    display:flex;
+}
+.submenu-active .submenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    padding:7px 4px;
+    width: 20%;
+    margin-left:-5%;
+    border-radius: 10px;
+}
+.submenu-active .sub-item a{
+   margin-left:-1%;
+   padding:2px;
+   text-align: left;
+   cursor:pointer;
+ }
+
+}
+/*---------------- Desktop Menu ---------------------------*/
+
+@media all and (min-width: 960px) {
+
+    .menu {
+         display:flex;
+         flex-wrap: nowrap;
+    background: none;
+    padding: 1.5% 1%;
+    gap:0;
+    justify-content: space-between;
+    }
+
+    .menu .items{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap:11%;
+        padding:0px 9%;
+    }
+
+    .submenu-active .submenu {
+        display: block;
+        position: absolute;
+        background-color: white;
+        width: 150%;
+        padding: 11% 15%;
+        margin-left: -40%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .menu li.sub-item {
+        padding: 9px 5px;
+        margin-left: 0;
+    }
+
+
+.logo{
+    order:0;
+    width:8%;
+}
+
+.menu li a{
+    padding: 11px 5px;
+    cursor:pointer;
+} 
+
+.item {
+    order: 1;
+    position: relative;
+  width:auto;
+  align-items: center;
+}
+
+.main-left{
+   width:100%;
+   text-align: center;
+
+}
+
+.main-right{
+    display:flex;
+    gap:16%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.desktop-hero{
+    display: block;
+}
+
+
+
+
+
+}
+/* ----------------------Below headder---------------------------------------- */
+
+@media only screen and (min-width: 320px){
+.heroMobile{
+    width:100%;
+}
+
+.hero-sec h1{
+    text-align:center;
+    margin: 15px auto;
+  
+}
+
+.hero-sec p{
+  text-align:center;
+  font-weight: lighter;
+  font-size:15px;
+  width:95%;
+  margin:auto;
+}
+
+.hero-sec .btn{
+    margin:15px auto;
+    display:block;
+    color:white;
+    background-color:black;
+    border-radius: 10px 10px;
+    padding:9px 12px;
+}
+
+
+.partners{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    width:100%;
+}
+.partners-icon img{
+ width:100%;
+ padding:1px 10px;  
+margin:15px auto;
+ }
+}
+
+@media only screen and (min-width: 768px){
+    
+}
+@media all and (min-width: 1024px) {
+    .mobile-heroImg{
+        display:none;
+        width:100%;
+          }
+          .heroMobile{
+            display:none;
+        }
+        .hero-sec{
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+        .hero-sec h1{
+         font-size:3.1em;
+         text-align: left;
+        margin: 0;
+        
+        }
+        
+        .hero-sec p{
+            font-size: 0.8em;
+            font-weight: lighter;
+            text-align: left;
+            line-height: 1.6;
+            padding: 7.9% 0;
+            width: 100%;
+        padding-right: 1%;
+        }
+        .hero-sec .btn{
+         margin:   0vh auto 7vh 0;
+        font-size: 1.0em;
+        display: block;
+        color: white;
+        background-color: black;
+        border-radius: 10px 10px;
+        border:1px solid transparent;
+        padding: 2% 5%;
+        }
+         
+        
+          .body-sec{
+            display:flex;
+        }
+        .body-sec .container{
+            FONT-VARIANT: JIS78;
+            display: flex;
+            flex: wrap;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 60%;
+            padding:11% 12%;
+        }
+         
+        #hero-desktop-image{
+            width:40%;
+        }
+        .desktop-hero{
+            width:100%;
+            padding: 8% 19% 2% 2%; 
+        
+        }
+        
+        
+        .partners{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 11%;
+            width: 100%;
+        }
+        .partners-icon img{
+         width:100%;
+        margin: auto;
+         }
+        .hero-sec h1 span{
+            display: block;
+        }
+}
+
+@media all and (min-width: 1365px) {
+
+    .hero-sec p{
+        font-size: 1.2em;
+        font-weight: lighter;
+        text-align: left;
+        line-height: 1.6;
+        padding: 7.9% 0;
+        
+    padding-right: 1%;
+    }
+    .hero-sec h1{
+        font-size:4.1em;
+        text-align: left;
+       
+       }
+       .hero-sec .btn{
+        margin:   0vh auto 8vh 0;
+       }
+       .hero-sec .btn:hover{
+        background-color: white;
+        color:black;
+    }
+    
+/* 
+.mobile-heroImg{
+display:none;
+width:100%;
+  }
+  .heroMobile{
+    display:none;
+}
+.hero-sec{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.hero-sec h1{
+ font-size:4.1em;
+ text-align: left;
+
+}
+
+.hero-sec p{
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-align: left;
+    line-height: 1.6;
+    padding: 7.9% 0;
+    
+padding-right: 1%;
+}
+.hero-sec .btn{
+margin-bottom: 7vh;
+margin-right: auto;
+font-size: 1.1em;
+display: block;
+color: white;
+background-color: black;
+border-radius: 10px 10px;
+padding: 2% 8%;
+}
+ 
+
+  .body-sec{
+    display:flex;
+}
+.body-sec .container{
+    FONT-VARIANT: JIS78;
+    display: flex;
+    flex: wrap;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    padding:11% 12%;
+}
+ 
+#hero-desktop-image{
+    width:40%;
+}
+.desktop-hero{
+    width:100%;
+    padding: 8% 19% 2% 2%; 
+
+}
+
+
+.partners{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 11%;
+    width: 100%;
+}
+.partners-icon img{
+ width:100%;
+margin: auto;
+ }
+.hero-sec h1 span{
+    display: block;
+} */
+
+}
+
